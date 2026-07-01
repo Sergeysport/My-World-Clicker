@@ -1,0 +1,125 @@
+/* Обнуляем отступы и делаем интерфейс адаптивным */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    user-select: none; /* Чтобы текст не выделялся случайно при частых кликах */
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #18181b; /* Тёмный стильный фон */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Настройки для экранов */
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 450px;
+    height: 90vh;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Скрытие экрана */
+.hidden {
+    display: none !important;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #a1a1aa;
+    font-size: 16px;
+}
+
+/* Список стран и кнопки */
+.country-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+button {
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.2s;
+}
+
+.btn-country {
+    background-color: #27272a;
+    color: white;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.btn-country:active {
+    transform: scale(0.98);
+    background-color: #3f3f46;
+}
+
+/* Стили экрана кликера */
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: #a1a1aa;
+    background: #27272a;
+    padding: 12px 20px;
+    border-radius: 12px;
+}
+
+.score-container {
+    margin: 40px 0;
+}
+
+#score-counter {
+    font-size: 64px;
+    font-weight: 800;
+    color: #38bdf8; /* Красивый голубой цвет для очков */
+}
+
+/* Главная кнопка КЛИКА */
+#click-btn {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8); /* Синий градиент */
+    color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Делаем её круглой */
+    font-size: 28px;
+    box-shadow: 0 10px 25px rgba(29, 78, 216, 0.4);
+    margin-bottom: 40px;
+}
+
+#click-btn:active {
+    transform: scale(0.92); /* Эффект сильного нажатия */
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #a1a1aa;
+    font-size: 14px;
+    text-decoration: underline;
+}

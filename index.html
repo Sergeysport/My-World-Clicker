@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Настройка, чтобы сайт не зумился и выглядел как мобильное приложение -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Битва Стран</title>
+    
+    <!-- Подключаем стили -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Официальный скрипт Telegram Web Apps (обязателен для Mini App) -->
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+
+    <!-- ЭКРАН 1: Выбор страны -->
+    <div id="screen-select-country" class="screen">
+        <h2>Выбери свою страну</h2>
+        <p>За кого будешь копить очки?</p>
+        
+        <div class="country-list">
+            <button class="btn-country" data-country="Армения">🇦🇲 Армения</button>
+            <button class="btn-country" data-country="Россия">🇷🇺 Россия</button>
+            <button class="btn-country" data-country="Казахстан">🇰🇿 Казахстан</button>
+            <!-- Сюда потом можно будет добавить любые другие страны -->
+        </div>
+    </div>
+
+    <!-- ЭКРАН 2: Главный кликер (пока скрыт) -->
+    <div id="screen-clicker" class="screen hidden">
+        <div class="header">
+            <span id="user-country">Страна: --</span>
+            <span id="global-rank">Место в топе: #--</span>
+        </div>
+
+        <div class="score-container">
+            <h1 id="score-counter">0</h1>
+            <p>твои очки</p>
+        </div>
+
+        <!-- Главная кнопка для пробивания -->
+        <button id="click-btn">КЛИК!</button>
+        
+        <button id="back-to-countries" class="btn-secondary">Сменить страну</button>
+    </div>
+
+    <!-- Подключаем нашу логику -->
+    <script src="app.js"></script>
+</body>
+</html>
